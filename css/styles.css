@@ -1,0 +1,39 @@
+.add-category-form {
+  display: none;
+}
+
+
+.list-group-item {
+  word-break: break-all;
+}
+
+.card .delete-comment-form {
+  display: none;
+}
+
+.card:hover .delete-comment-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.input-group-append .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.product-image {
+  height: 180px;
+  object-fit: cover;
+}
+
+.likes {
+  cursor: pointer;
+}

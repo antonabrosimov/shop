@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css">
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      border: 0;
+    }
+
+    .main-photo {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .thumb {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+      <img class="main-photo" src="https://findicons.com/files/icons/774/micro/128/file_server_off.png" />
+  </div>
+  <div class="thumbs"></div>
+  
+  <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var images = [
+        'https://findicons.com/files/icons/774/micro/128/file_server_off.png',
+        'https://findicons.com/files/icons/251/apple_hardware/128/cinema_display_off_mac_mini.png',
+        'https://findicons.com/files/icons/574/neige/128/network_off.png',
+        'https://findicons.com/files/icons/811/developer_kit/128/light_bulb_off.png',
+        'https://findicons.com/files/icons/1065/3d_cartoon/128/windows_log_off.png'
+      ];
+
+      for (var i = 0; i < images.length; i++) {
+        $('.thumbs').append(`
+          <img class="thumb" src="${images[i]}" />
+        `);
+      }
+
+      $(document).on('click', '.thumb', function() {
+        $('.main-photo').attr('src', $(this).attr('src'));
+      });
+    });
+  </script>
+</body>
+</html>
